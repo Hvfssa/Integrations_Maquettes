@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+/* Table des matières */
+/* Global */
+/* Header */
+/* Main */
+/* Footer */
+/* Responsive pour les écrans et :
+   - une largeur au dessus de 1024px 
+   - une largeur au dessus de 768px
+   - une largeur en dessous de 768px
+   et jusqu'à 280px     */
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: block;
+}
+
+header #header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+  margin: auto;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 2.563rem 1rem;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header #logo {
+  object-fit: cover;
+  width: 55px;
+  height: 40px;
+  margin-left: 1.25rem;
+}
+
+header #img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+/* Main */
+main img {
+  width: 300px;
+  height: 280px;
+  object-fit: cover;
+}
+
+main h2 {
+  font-size: 2.25rem;
+  font-family: system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main p {
+  font-size: 1.25rem;
+  font-family: system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main article {
+  margin-top: 4.375rem;
+  margin-bottom: 4.375rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .Planètes {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  max-width: 1200px;
+  align-items: center;
+}
+
+main .Planètes .Laplanète {
+  margin-left: 3.938rem;
+}
+
+main .Planètes img {
+  margin-right: 3.938rem;
+}
+
+main #CA {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+}
+
+main #CA::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 25%;
+  background-color: black;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+main #CA::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 25%;
+  background-color: black;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+main .Planètesl {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: justify;
+  max-width: 1200px;
+  align-items: center;
+}
+
+main .Planètesl .Laplanète {
+  margin-right: 3.938rem;
+}
+
+main .Planètesl img {
+  margin-left: 3.938rem;
+}
+
+main .Téll {
+  display: inline-block;
+  background-color: #d6d5ab;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  font-family: system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+main .Anti {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  font-family: system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main .Gaz {
+  display: inline-block;
+  background: linear-gradient(#816797, #51557e);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  font-family: system-ui, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+}
+
+footer #Footer {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 1.875rem;
+}
+
+footer h2 {
+  color: white;
+  font-size: 1.875rem;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+footer a {
+  display: block;
+  color: #9f9f9f;
+  text-decoration: none;
+  padding: 0.625rem;
+}
+
+footer ul {
+  text-align: center;
+  padding: auto;
+}
+
+footer p {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+footer p::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 80%;
+  background-color: white;
+  right: 10%;
+  left: 10%;
+  transform: translateY(-50%);
+  bottom: 50px;
+}
+
+footer #Tellf {
+  text-align: center;
+  position: relative;
+}
+
+footer #Tellf::after {
+  position: absolute;
+  content: "";
+  height: 185px;
+  width: 2px;
+  background-color: white;
+  top: 8%;
+  right: 0;
+}
+
+footer #Gazf {
+  position: relative;
+}
+
+footer #Gazf::after {
+  position: absolute;
+  content: "";
+  height: 185px;
+  width: 2px;
+  background-color: white;
+  top: 8%;
+  right: 0;
+}
+
+/* Responsive */
+/* Tous les écrans, à partir de 1024px de large, respecteront les règles CSS suivantes*/
+@media screen and (max-width: 1024px) and (min-width: 280px) {
+
+  /*Main*/
+  main .Planètes .Laplanète {
+    margin-right: 1.25rem;
+  }
+
+  main .Planètesl .Laplanète {
+    margin-left: 1.25rem;
+  }
+}
+
+/* Tous les écrans, à partir de 768px de large, respecteront les règlent CSS suivantes*/
+@media screen and (max-width: 768px) and (min-width: 280px) {
+
+  /* Header */
+  header #header #logo {
+    margin-left: 1.25rem;
+  }
+
+  header #header nav ul {
+    width: 50px;
+    height: 50px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    position: relative;
+  }
+
+  header #header nav ul::after {
+    content: "";
+    top: 50%;
+    height: 5px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  header #header nav li {
+    display: none;
+  }
+
+  /* Main */
+  main .Laplanète {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  main .Planètes {
+    display: block;
+  }
+
+  main .Planètes img {
+    margin: auto;
+    display: block;
+  }
+
+  main .Planètes h2 {
+    display: inline-block;
+    width: calc(100% - 250px);
+  }
+
+  main .Planètesl {
+    display: block;
+  }
+
+  main .Planètesl img {
+    margin: auto;
+    display: block;
+  }
+
+  main .Planètesl h2 {
+    display: inline-block;
+    width: calc(100% - 250px);
+  }
+
+  main #CA {
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  main #CA::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 19%;
+    background-color: black;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  main #CA::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 19%;
+    background-color: black;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  /* Footer */
+  footer #Footer {
+    display: block;
+  }
+
+  footer #Tellf {
+    position: relative;
+    box-shadow: 0 4px 4px;
+  }
+
+  footer #Tellf::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 80%;
+    background-color: white;
+    right: 10%;
+    left: 10%;
+    transform: translateY(-50%);
+    top: auto;
+  }
+
+  footer #Gazf {
+    position: relative;
+  }
+
+  footer #Gazf::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 80%;
+    background-color: white;
+    right: 10%;
+    left: 10%;
+    transform: translateY(-50%);
+    top: auto;
+  }
+
+  footer p {
+    position: relative;
+  }
+
+  footer p::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 80%;
+    background-color: white;
+    right: 10%;
+    left: 10%;
+    transform: translateY(-50%);
+    bottom: 63px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

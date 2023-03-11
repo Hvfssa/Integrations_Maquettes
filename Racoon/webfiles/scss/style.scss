@@ -1,0 +1,294 @@
+/* Table des matières*/
+/* GLOBAL */
+/* HEADER */
+/* MAIN */
+/* ASIDE*/
+/* RESPONSIVE avec les largeurs suivantes:
+    - Surface Pro 4 - 1 -> en dessous de 1024 px
+    - Iphone 8 - 1 -> en dessous de 768 px*/
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        max-width: 1040px;
+
+        nav {
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+            }
+
+            a {
+                display: block;
+                padding: 1.875rem;
+                text-decoration: none;
+                color: #9f9f9f;
+                font-size: 1.063rem;
+                font-family: 'Montserrat', sans-serif;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            #Articles {
+                color: black;
+            }
+        }
+
+        #logoRS {
+            #FB {
+                height: 20px;
+                width: 10px;
+                margin-right: 0.938rem;
+                object-fit: cover;
+            }
+
+            #twitter {
+                height: 20.27px;
+                width: 24.95px;
+                margin-left: 0.938rem;
+                object-fit: cover;
+            }
+        }
+    }
+
+    #img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+/* Main */
+main {
+    display: flex;
+    position: relative;
+
+    .article {
+        display: grid;
+        grid-template-areas: "a b"
+            "a c"
+            "a d";
+        align-items: center;
+        margin: auto;
+        max-width: 1040px;
+        text-align: justify;
+        padding: 1.813rem 0;
+        padding-right: 6.813rem;
+
+        .image {
+            object-fit: cover;
+            width: 339px;
+            height: 203px;
+            padding-right: 1.563rem;
+            grid-area: a;
+        }
+
+        time {
+            grid-area: b;
+            font-size: 1.063rem;
+            font-family: 'Montserrat', sans-serif;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        h2 {
+            display: block;
+            padding-top: 0.238rem;
+            padding-bottom: 0.484rem;
+            font-size: 2.25rem;
+            font-family: 'Cardo', serif;
+            grid-area: c;
+        }
+
+        p {
+            padding-top: 0.484rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.063rem;
+            text-align: justify;
+            grid-area: d;
+
+            &:first {
+                padding-bottom: 0.238rem;
+            }
+        }
+
+    }
+
+    #Lesarticles {
+        margin-left: 3.125rem;
+    }
+
+
+    /* ASIDE */
+    #Aside {
+        margin-left: 6.813rem;
+        height: 1212px;
+    }
+
+    aside {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-left: 3.75rem;
+        padding-right: 4.25rem;
+        padding-top: 2.875rem;        
+        background-color: #fbfbfb;
+        position: relative;
+
+        &:last-of-type {
+            right: 0;
+            top: 0;
+        }
+
+        &:last-of-type::before {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 70%;
+            top: 0;
+            right: 15%;
+            background-color: black;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.25rem;
+            padding-bottom: 1.134rem;
+        }
+
+        li {
+            list-style: none;
+
+            &:first-of-type {
+                padding-top: 1.134rem;
+            }
+        }
+
+        a {
+            display: block;
+            font-size: 1.063rem;
+            font-family: 'Montserrat', sans-serif;
+            padding-bottom: 0.531rem;
+            list-style: none;
+            text-decoration: none;
+            color: #9f9f9f;
+        }
+    }
+}
+
+/* RESPONSIVE */
+/* Les règles CSS suivantes vont s'appliquer à tous les écrans possèdant une largeur en dessous de 1024 px*/
+@media screen and (max-width: 1024px) {
+    header {
+        #header {
+            margin-left: 4.688rem;
+            margin-right: 4.688rem;
+        }
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        #Lesarticles{
+            margin-left: 20px;
+        }
+
+        #Aside {
+            display: flex;
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding-bottom: 2.625rem;
+            padding-top: 3.5rem;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0.26%, rgba(0, 0, 0, 0) 9.39%)#fbfbfb;
+
+            aside {
+                position: relative;
+                padding-top: 0;
+
+                &:last-of-type::before {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: black;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+   header{
+    #header{
+        display: block;
+        margin-left: 0.938rem;
+        margin-right: 0.938rem;
+        nav{
+            a{
+                padding: 0.625rem;
+                font-size: 1rem;
+            }
+        }
+        #logoRS{
+            text-align: center;
+        }
+    }
+   }
+   main{
+    #Lesarticles{
+        margin-left: 20px;
+    }
+    .article{
+        grid-template-areas: "c b" "a a" "d d";
+        padding-bottom: 1.25rem;
+        h2{
+            font-size: 1.125rem;
+        }
+        time{
+            font-size: 0.688rem;
+        }
+        p{
+            font-size: 0.688rem;
+        }
+        .image{
+            width: 310px;
+            height: 100px;
+        }
+    }
+    #Aside{
+        display: block;
+       }
+   }
+   #Aside{
+    display: block;
+    aside{
+        position: relative;
+        &:last-of-type::before{
+            position: absolute;
+            content: "";
+            width: 70%;
+            height: 2px;
+            left: 15%;
+            top: 0;
+            background-color: black;
+        }
+    }
+   }
+}

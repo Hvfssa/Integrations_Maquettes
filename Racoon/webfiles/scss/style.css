@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* Table des matières*/
+/* GLOBAL */
+/* HEADER */
+/* MAIN */
+/* SIDE*/
+/**/
+/**/
+/**/
+/**/
+/**/
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+header #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 1040px;
+}
+header #header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+header #header nav a {
+  display: block;
+  padding: 30px;
+  text-decoration: none;
+  color: #9f9f9f;
+}
+header #header nav a:hover {
+  text-decoration: underline;
+}
+header #header nav #Articles {
+  color: black;
+}
+header #header #logoRS #FB {
+  height: 20px;
+  width: 10px;
+  padding-right: 15px;
+}
+header #header #logoRS #twitter {
+  height: 20.27px;
+  width: 24.95px;
+  padding-left: 15px;
+}
+header #img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+/* Main */
+main .article {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  max-width: 1040px;
+  text-align: justify;
+  padding: 29px 0;
+}
+main .article .image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 339px;
+  height: 203px;
+  padding-right: 25px;
+}
+main .article h2 {
+  display: block;
+  padding-top: 3.8px;
+  padding-bottom: 7.75px;
+  font-size: 17px;
+  font-family: "Cardo";
+}
+main .article p {
+  padding-top: 7.75px;
+  font-family: "Montserrat";
+  font-size: 17px;
+}
+main .article p:first {
+  padding-bottom: 3.8px;
+}/*# sourceMappingURL=style.css.map */

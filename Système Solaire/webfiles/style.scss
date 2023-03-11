@@ -1,0 +1,444 @@
+/* Table des matières */
+/* Global */
+/* Header */
+/* Main */
+/* Footer */
+/* Responsive pour les écrans et :
+   - une largeur au dessus de 1024px 
+   - une largeur au dessus de 768px
+   - une largeur en dessous de 768px
+   et jusqu'à 280px     */
+
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: block;
+
+    #header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: black;
+        align-items: center;
+        margin: auto;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        a {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            display: block;
+            padding: 2.563rem 1rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    #logo {
+        object-fit: cover;
+        width: 55px;
+        height: 40px;
+        margin-left: 1.25rem;
+    }
+
+    #img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Main */
+main {
+    img {
+        width: 300px;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+        font-size: 1.25rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    article {
+        margin-top: 4.375rem;
+        margin-bottom: 4.375rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Planètes {
+        display: flex;
+        flex-direction: row;
+        text-align: justify;
+        max-width: 1200px;
+        align-items: center;
+
+        .Laplanète {
+            margin-left: 3.938rem;
+        }
+
+        img {
+            margin-right: 3.938rem;
+        }
+    }
+
+    #CA {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        position: relative;
+        text-transform: uppercase;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 25%;
+            background-color: black;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 25%;
+            background-color: black;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    .Planètesl {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        text-align: justify;
+        max-width: 1200px;
+        align-items: center;
+
+        .Laplanète {
+            margin-right: 3.938rem;
+        }
+
+        img {
+            margin-left: 3.938rem;
+        }
+    }
+
+    .Téll {
+        display: inline-block;
+        background-color: #d6d5ab;
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        font-size: 1.125rem;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        margin-right: 1.25rem;
+    }
+
+    .Anti {
+        display: inline-block;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        font-size: 1.125rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Gaz {
+        display: inline-block;
+        background: linear-gradient(#816797, #51557e);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        font-size: 1.125rem;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        margin-right: 1.25rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: black;
+
+    #Footer {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 1.25rem;
+        padding-bottom: 1.875rem;
+    }
+
+    h2 {
+        color: white;
+        font-size: 1.875rem;
+        text-align: center;
+        padding: 0.625rem;
+    }
+
+    a {
+        display: block;
+        color: #9f9f9f;
+        text-decoration: none;
+        padding: 0.625rem;
+    }
+
+    ul {
+        text-align: center;
+        padding: auto;
+    }
+
+    p {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding: 0.625rem;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 80%;
+            background-color: white;
+            right: 10%;
+            left: 10%;
+            transform: translateY(-50%);
+            bottom: 50px;
+        }
+    }
+
+    #Tellf {
+        text-align: center;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 185px;
+            width: 2px;
+            background-color: white;
+            top: 8%;
+            right: 0;
+        }
+    }
+
+    #Gazf {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 185px;
+            width: 2px;
+            background-color: white;
+            top: 8%;
+            right: 0;
+        }
+    }
+}
+
+/* Responsive */
+/* Tous les écrans, à partir de 1024px de large, respecteront les règles CSS suivantes*/
+@media screen and (max-width: 1024px) and (min-width: 280px) {
+
+    /*Main*/
+    main {
+        .Planètes {
+            .Laplanète {
+                margin-right: 1.25rem;
+            }
+        }
+
+        .Planètesl {
+            .Laplanète {
+                margin-left: 1.25rem;
+            }
+        }
+    }
+}
+
+/* Tous les écrans, à partir de 768px de large, respecteront les règlent CSS suivantes*/
+@media screen and (max-width: 768px) and (min-width: 280px) {
+
+    /* Header */
+    header {
+        #header {
+            #logo {
+                margin-left: 1.25rem;
+            }
+
+            nav {
+                ul {
+                    width: 50px;
+                    height: 50px;
+                    border-top: 5px solid white;
+                    border-bottom: 5px solid white;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        top: 50%;
+                        height: 5px;
+                        background-color: white;
+                        width: 100%;
+                        position: absolute;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                li {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /* Main */
+    main {
+        .Laplanète {
+            margin-left: 1.25rem;
+            margin-right: 1.25rem;
+        }
+
+        .Planètes {
+            display: block;
+
+            img {
+                margin: auto;
+                display: block;
+            }
+
+            h2 {
+                display: inline-block;
+                width: calc(100% - 250px);
+            }
+        }
+
+        .Planètesl {
+            display: block;
+
+            img {
+                margin: auto;
+                display: block;
+            }
+
+            h2 {
+                display: inline-block;
+                width: calc(100% - 250px);
+            }
+        }
+
+        #CA {
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        #CA::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 19%;
+            background-color: black;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        #CA::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 19%;
+            background-color: black;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    /* Footer */
+    footer {
+        #Footer {
+            display: block;
+        }
+
+        #Tellf {
+            position: relative;
+            box-shadow: 0 4px 4px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 80%;
+                background-color: white;
+                right: 10%;
+                left: 10%;
+                transform: translateY(-50%);
+                top: auto;
+            }
+        }
+
+        #Gazf {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 80%;
+                background-color: white;
+                right: 10%;
+                left: 10%;
+                transform: translateY(-50%);
+                top: auto;
+            }
+        }
+
+        p {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 80%;
+                background-color: white;
+                right: 10%;
+                left: 10%;
+                transform: translateY(-50%);
+                bottom: 63px;
+            }
+        }
+    }
+}
